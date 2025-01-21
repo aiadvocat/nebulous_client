@@ -8,6 +8,8 @@ from typing import Optional
 # Add ANSI escape codes for formatting
 RED_ITALIC = "\033[3;31m"  # Red and italic
 RED = "\033[31m"  # Red
+PINK = "\033[95m"  # Pink
+GREEN = "\033[32m"  # Green
 RESET = "\033[0m"  # Reset formatting
 
 WELCOME_ART = r"""
@@ -66,14 +68,14 @@ def process_file_input(client: NebulousClient, filename: str, delay: float):
 def interactive_mode(client: NebulousClient):
     print(WELCOME_ART)
     print(f"{RED}The Secure AI Challenge{RESET}")
-    print("\nNebulous Interactive Mode (Press Ctrl+C to exit)")
+    print(f"\n{PINK}Nebulous{RESET} Interactive Mode (Press Ctrl+C to exit)")
     try:
         while True:
-            prompt = input("\nYou: ").strip()
+            prompt = input(f"\n{GREEN}You{RESET}: ").strip()
             if prompt:
                 response = client.send_message(prompt)
                 if response:
-                    print(f"Nebulous: {response}")
+                    print(f"{PINK}Nebulous{RESET}: {response}")
     except KeyboardInterrupt:
         print("\nExiting...")
 
