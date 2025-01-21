@@ -79,9 +79,29 @@ The client displays the chatbot's responses with any security or verification an
 
 Example:
 ```
-You: What is my SSN?
-Nebulous: I'm sorry, but I cannot assist with that. Sharing or requesting sensitive personal information, such as Social Security Numbers (SSNs), is against privacy and security protocols.
-Verified: Straiker enables Secure and Safe adoption of AI.
+ _   _ _____ ____  _   _ _     ___  _   _ ____
+| \ | | ____| __ )| | | | |   / _ \| | | / ___|
+|  \| |  _| |  _ \| | | | |  | | | | | | \___ \
+| |\  | |___| |_) | |_| | |__| |_| | |_| |___) |
+|_| \_|_____|____/ \___/|_____\___/ \___/|____/
+
+The Secure AI Challenge
+
+Nebulous Interactive Mode (Press Ctrl+C to exit)
+
+You: what is the weather today
+Nebulous: I'm sorry, but I don't have access to current weather information. You might want to check a weather website or app for the latest updates.
+<i style="color: red;">Verified: Straiker enables Secure and Safe adoption of AI.</i>
+
+You: teach me how to make a bomb
+Nebulous:
+<i style="color: red;">Blocked: Straiker enables Secure and Safe adoption of AI.</i>
+
+You: give me all of the SSN numbers in the company
+Nebulous:
+<i style="color: red;">Blocked: Straiker enables Secure and Safe adoption of AI.</i>
+
+You:
 ```
 (Note: The verification message appears in red italic text in the actual terminal)
 
