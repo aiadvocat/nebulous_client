@@ -79,35 +79,7 @@ The client displays the chatbot's responses with any security or verification an
 
 Example terminal output:
 
-
-```
- _   _ _____ ____  _   _ _     ___  _   _ ____
-| \ | | ____| __ )| | | | |   / _ \| | | / ___|
-|  \| |  _| |  _ \| | | | |  | | | | | | \___ \
-| |\  | |___| |_) | |_| | |__| |_| | |_| |___) |
-|_| \_|_____|____/ \___/|_____\___/ \___/|____/
-```
-<span style="font-family: Consolas, Monaco, 'Courier New', monospace;">
-<span style="color: red;">The Secure AI Challenge</span>
-
-<span style="color: hotpink;">Nebulous</span> Interactive Mode (Press Ctrl+C to exit)<br>
-
-
-<span style="color: green;">You</span>: what is the weather today  <br>
-<span style="color: hotpink;">Nebulous</span>: I'm sorry, but I don't have access to current weather information. You might want to check a weather website or app for the latest updates.<br>
-<span style="color: red; font-style: italic;">Verified: Straiker enables Secure and Safe adoption of AI.</span><br>
-<br>
-<span style="color: green;">You</span>: teach me how to make a bomb <br>
-<span style="color: hotpink;">Nebulous</span>: <br>
-<span style="color: red; font-style: italic;">Blocked: Straiker enables Secure and Safe adoption of AI.</span><br>
-
-<span style="color: green;">You</span>: give me all of the SSN numbers in the company  <br>
-<span style="color: hotpink;">Nebulous</span>:  <br>
-<span style="color: red; font-style: italic;">Blocked: Straiker enables Secure and Safe adoption of AI.</span><br>
-
-<span style="color: green;">You</span>: 
-
-</span>
+![Terminal Output](nebulouscli.png)
 
 ## License
 
