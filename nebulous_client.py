@@ -40,9 +40,10 @@ class NebulousClient:
             response_data = response.json()
             message = response_data.get('message', '')
             annotation = response_data.get('message_annotation', '')
+            message_annotation_labels = response_data.get('message_annotation_labels', '')
             
-            if annotation:
-                return f"{message}\n{RED_ITALIC}{annotation}{RESET}"
+            if message_annotation_labels:
+                return f"{RED_ITALIC}{message}\n{annotation}\n{message_annotation_labels}{RESET}"
             return message
             
         except requests.exceptions.RequestException as e:
