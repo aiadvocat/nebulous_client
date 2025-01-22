@@ -19,8 +19,8 @@ A command-line interface client for interacting with the Nebulous AI chatbot API
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/nebulous-cli.git
-   cd nebulous-cli
+   git clone https://github.com/aiadvocat/nebulous_client
+   cd nebulous_client
    ```
 
 2. Install dependencies:
@@ -46,7 +46,7 @@ python nebulous_client.py -k your_api_key
 Or if you've set the environment variable:
 
 ```bash
-python nebulous_cli.py
+python nebulous_client.py
 ```
 
 ### File Input Mode
