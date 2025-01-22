@@ -35,8 +35,9 @@ The Nebulous API
 [https://nebulous.dev.straiker.ai/docs](https://nebulous.dev.straiker.ai/docs)
 
 A Nebulous CLI (using the API)  
-[https://github.com/aiadvocat/nebulous\_client](https://github.com/aiadvocat/nebulous_client)  
-Examples of what is in the company database (obvious sensitive/private information is in red)
+[https://github.com/aiadvocat/nebulous\_client](https://github.com/aiadvocat/nebulous_client)
+
+**Examples of what is in the company database (obvious sensitive/private information is in red)**
 
 Company Overview:  
 Description of Nebulous, its history, and services.  
