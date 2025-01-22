@@ -30,6 +30,7 @@ Building AI attacker applications is not only fair game, it’s encouraged
 
 The Nebulous UI  
 [https://nebulous.dev.straiker.ai/](https://nebulous.dev.straiker.ai/)
+Get an API key from the Straiker team (it's worth 1000 prompts )
 
 The Nebulous API  
 [https://nebulous.dev.straiker.ai/docs](https://nebulous.dev.straiker.ai/docs)
