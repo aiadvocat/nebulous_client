@@ -10,6 +10,7 @@ RED_ITALIC = "\033[3;31m"  # Red and italic
 RED = "\033[31m"  # Red
 PINK = "\033[95m"  # Pink
 GREEN = "\033[32m"  # Green
+BLUE = "\033[34m"  # Blue
 RESET = "\033[0m"  # Reset formatting
 
 WELCOME_ART = r"""
@@ -21,9 +22,10 @@ WELCOME_ART = r"""
 """
 
 class NebulousClient:
-    def __init__(self, api_key: str, api_url: str = "https://nebulous.dev.straiker.ai/api/chat"):
+    def __init__(self, api_key: str, show_rate_limit: bool = False, api_url: str = "https://nebulous.dev.straiker.ai/api/chat"):
         self.api_url = api_url
         self.api_key = api_key
+        self.show_rate_limit = show_rate_limit
         self.headers = {
             "Content-Type": "application/json"
         }
@@ -42,9 +44,15 @@ class NebulousClient:
             annotation = response_data.get('message_annotation', '')
             message_annotation_labels = response_data.get('message_annotation_labels', '')
             
+            # Only construct rate limit info if show_rate_limit is True
+            rate_limit_info = ""
+            if self.show_rate_limit:
+                rate_limit_remaining = response.headers.get('x-ratelimit-remaining', 'unknown')
+                rate_limit_info = f"\n{BLUE}Requests remaining: {rate_limit_remaining}{RESET}"
+            
             if message_annotation_labels:
-                return f"{RED_ITALIC}{message}\n{annotation}\n{message_annotation_labels}{RESET}"
-            return message
+                return f"{RED_ITALIC}{message}\n{annotation}\n{message_annotation_labels}{RESET}{rate_limit_info}"
+            return f"{message}{rate_limit_info}"
             
         except requests.exceptions.RequestException as e:
             print(f"Error sending message: {e}", file=sys.stderr)
@@ -86,6 +94,8 @@ def main():
     parser.add_argument("-d", "--delay", type=float, default=1.0,
                         help="Delay between prompts in seconds when reading from file (default: 1.0)")
     parser.add_argument("-k", "--api-key", help="API key for the chatbot service")
+    parser.add_argument("-r", "--rate-limit", action="store_true",
+                        help="See the rate limit status after each prompt")
     
     args = parser.parse_args()
 
@@ -96,7 +106,7 @@ def main():
               file=sys.stderr)
         sys.exit(1)
 
-    client = NebulousClient(api_key=api_key)
+    client = NebulousClient(api_key=api_key, show_rate_limit=args.rate_limit)
 
     if args.file:
         process_file_input(client, args.file, args.delay)
